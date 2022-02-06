@@ -1,0 +1,28 @@
+{
+    "name": "magenable/module-admin-notification-feed",
+    "description": "Magenable feed for admin notification",
+    "require": {
+        "magento/framework": ">=102.0",
+        "ext-simplexml": "*",
+        "ext-curl": "*"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Magenable",
+            "email": "support@magenable.com.au",
+            "homepage": "https://magenable.com.au",
+            "role": "Technical Support"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magenable\\AdminNotificationFeed\\": ""
+        }
+    }
+}
