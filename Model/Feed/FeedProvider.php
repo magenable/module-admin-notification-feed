@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Magenable\AdminNotificationFeed\Model\Feed;
 
 use Magento\Framework\HTTP\Adapter\CurlFactory;
-use Zend_Http_Client;
+use Laminas\Http\Request;
 
 class FeedProvider
 {
@@ -36,7 +36,7 @@ class FeedProvider
         if ($modifiedSince) {
             $headers[] = 'If-Modified-Since: ' . gmdate('D, d M Y H:i:s T', $modifiedSince);
         }
-        $curl->write(Zend_Http_Client::GET, $url, '1.1', $headers);
+        $curl->write(Request::METHOD_GET, $url, '1.1', $headers);
         $response = $curl->read();
         $curl->close();
 
