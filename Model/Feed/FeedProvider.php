@@ -28,7 +28,7 @@ class FeedProvider
      * @param int|null $modifiedSince
      * @return string|null
      */
-    public function getFeedContent(string $url, int $modifiedSince = null): ?string
+    public function getFeedContent(string $url, ?int $modifiedSince = null): ?string
     {
         $curl = $this->curlFactory->create();
         $curl->addOption(CURLOPT_ACCEPT_ENCODING, 'gzip');
